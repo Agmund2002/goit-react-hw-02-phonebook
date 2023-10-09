@@ -9,6 +9,7 @@ const theme = {
     main: '#cfc6c6',
     txt: '#262626',
     accent: '#455af7',
+    negative: '#e60000',
   },
   spacing: value => `${value * 4}px`,
   animation: '250ms cubic-bezier(0.4, 0, 0.2, 1);',

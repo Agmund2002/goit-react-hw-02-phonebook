@@ -4,6 +4,7 @@ import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { MainTitle, SecondaryTitle } from './individualElements/Title.styled';
 
 export class App extends Component {
   state = {
@@ -53,9 +54,9 @@ export class App extends Component {
 
     return (
       <div>
-        <h1>Phonebook</h1>
+        <MainTitle>Phonebook</MainTitle>
         <ContactForm onAdd={this.addContact} />
-        <h2>Contacts</h2>
+        <SecondaryTitle>Contacts</SecondaryTitle>
         <Filter filter={filter} onChange={this.changeFilter} />
         <ContactList arr={filterArray} onDelete={this.deleteContact} />
       </div>

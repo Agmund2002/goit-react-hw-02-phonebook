@@ -1,5 +1,6 @@
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { Button, Label, ModernErrorMessage, ModernField, ModernForm } from './ContactForm.styled';
 
 const schema = Yup.object().shape({
   name: Yup.string()
@@ -24,21 +25,21 @@ export const ContactForm = ({onAdd}) => {
         actions.resetForm();
       }}
     >
-      <Form>
-        <label>
+      <ModernForm>
+        <Label>
           Name
-          <Field name="name" placeholder="Jane Doe" />
-          <ErrorMessage name="name" />
-        </label>
+          <ModernField name="name" placeholder="Jane Doe" />
+          <ModernErrorMessage component="span" name="name" />
+        </Label>
 
-        <label>
+        <Label>
           Phone number
-          <Field type="tel" name="number" placeholder="+380(99)-000-0000" />
-          <ErrorMessage name="number" />
-        </label>
+          <ModernField type="tel" name="number" placeholder="+380(99)-000-0000" />
+          <ModernErrorMessage component="span" name="number" />
+        </Label>
 
-        <button type='submit'>Add contact</button>
-      </Form>
+        <Button type='submit'>Add contact</Button>
+      </ModernForm>
     </Formik>
   );
 };

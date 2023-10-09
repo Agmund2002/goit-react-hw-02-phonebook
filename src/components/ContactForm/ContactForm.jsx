@@ -8,7 +8,8 @@ const schema = Yup.object().shape({
     .max(30, 'Too Long!')
     .required('Required'),
   number: Yup.string()
-    // .length(9, 'Invalid phone number')
+    .min(10, 'Short phone number')
+    .max(22, 'Long phone number')
     .required('Required'),
 });
 
@@ -34,7 +35,7 @@ export const ContactForm = ({onAdd}) => {
 
         <Label>
           Phone number
-          <ModernField type="tel" name="number" placeholder="+380(99)-000-0000" />
+          <ModernField type="tel" name="number" placeholder="+38(099)-000-0000" />
           <ModernErrorMessage component="span" name="number" />
         </Label>
 

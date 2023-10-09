@@ -1,5 +1,13 @@
-export const ContactList = () => {
+import { Contact } from "components/Contact/Contact";
+
+export const ContactList = ({arr, onDelete}) => {
   return (
-    <div></div>
+    <ul>
+      {arr.map(item => (
+        <li key={item.id}>
+          <Contact data={item} onDelete={onDelete} />
+        </li>
+      ))}
+    </ul>
   );
 };

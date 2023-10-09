@@ -23,7 +23,6 @@ h4,
 h5,
 h6,
 p,
-ul,
 button {
   margin: 0;
   padding: 0;
@@ -35,9 +34,5 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-ul {
-  list-style: none;
 }
 `;

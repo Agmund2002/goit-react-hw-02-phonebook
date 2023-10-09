@@ -1,5 +1,9 @@
-export const Filter = () => {
+export const Filter = ({ filter, onChange }) => {
   return (
-    <div></div>
+    <input
+      type="text"
+      value={filter}
+      onChange={evt => onChange(evt.target.value)}
+    />
   );
 };
